@@ -1,0 +1,11 @@
+{
+    "name": "DS2017",
+    "require": {
+      "drush/drush": "~8.4"
+    },
+    "minimum-stability": "dev",
+    "config": {
+      "secure-http": false,
+      "bin-dir": "bin/"
+    }
+  }

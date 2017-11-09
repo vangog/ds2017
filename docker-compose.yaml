@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  app:
+    image: previousnext/php:7.1-dev
+    network_mode: host
+    volumes:
+      - .:/data
+
+  db:
+    image: mariadb
+    network_mode: host
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=local
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+
+  mail:
+    image: mailhog/mailhog
+    network_mode: host
+
+  search:
+    image: previousnext/solr:5.x
+    network_mode: host
