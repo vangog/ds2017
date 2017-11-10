@@ -7,7 +7,7 @@ PASS=password
 APP=$(shell pwd)/app
 
 init:
-	composer install --prefer-dist
+	composer install --prefer-dist --no-progress
 
 install: init
 	drush site-install -y --site-name=$(NAME) --account-pass=$(PASS) $(PROFILE)
