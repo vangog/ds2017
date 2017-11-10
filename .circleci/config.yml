@@ -9,7 +9,7 @@ jobs:
           name: Unit Tests
           command: echo 'Run your unit tests here'
       - run:
-          name: Builds Environment
+          name: Build Environment
           command: |
             m8s build --git-revision=${CIRCLE_SHA1} \
                       --name=${CIRCLE_BRANCH} \
