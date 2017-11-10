@@ -17,7 +17,7 @@ services:
       - MYSQL_PASSWORD=drupal
 
   mail:
-    image: mailhog/mailhog
+    image: previousnext/mailhog:latest
     network_mode: host
 
   search:
