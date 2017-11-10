@@ -6,16 +6,19 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Test
-          command: echo 'Run your tests here'
+          name: Unit Tests
+          command: echo 'Run your unit tests here'
       - run:
-          name: Environment
+          name: Builds Environment
           command: |
             m8s build --git-revision=${CIRCLE_SHA1} \
                       --name=${CIRCLE_BRANCH} \
                       --domains=${CIRCLE_BRANCH}.nickschuch.com \
                       --basic-auth-user='nick' \
                       --basic-auth-pass='nick'
+      - run:
+          name: Build Step Example
+          command: m8s step ${CIRCLE_BRANCH} app "echo Hello"
 
 workflows:
   version: 2
