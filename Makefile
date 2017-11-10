@@ -9,6 +9,6 @@ APP=$(shell pwd)/app
 init:
 	composer install --prefer-dist
 
-install:
+install: init
 	drush site-install -y --site-name=$(NAME) --account-pass=$(PASS) $(PROFILE)
 	chown -R www-data:www-data $(APP)
