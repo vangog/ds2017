@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: previousnext/m8s:v0.4.2
+      - image: previousnext/m8s:v0.4.2-2-g3c2bd30e
     steps:
       - checkout
       - run:
