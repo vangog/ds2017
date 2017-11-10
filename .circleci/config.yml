@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     docker:
       - image: previousnext/m8s:v0.4.1
     steps:
@@ -19,6 +19,6 @@ jobs:
 
 workflows:
   version: 2
-  test:
+  build:
     jobs:
-      - test
+      - build
